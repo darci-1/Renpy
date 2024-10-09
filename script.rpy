@@ -28,6 +28,8 @@ label start:
 
     # These display lines of dialogue.
 
+    e "i am escaping the range, i have found some keys!"
+
     e "can you help me choose a key?"
 
     
@@ -67,17 +69,17 @@ label after_menu2:
      "after choosing the key, i found myself infront of three doors, not knowing which one to open."
 menu:
     "yellow door.":
-        "wrong door, you are now stuck in the labrynth '"
+        "wrong door, you are in the sargents office and got told off  '"
         
-    "green door.":
+    "red door.":
         "not quite right, try again "
         
-    "red door." if drank_tea:
-        "YES!, you have chosen the right door and can be on your way '"
+    "green door." if drank_tea:
+        "YES!, you have chosen the right door, you can now go to target practice '"
 
 label ending:
     if refuse_drink:
-        "you chose the bronze key, you now have to leave! "
+        "you chose the bronze key, the sargent caught you, you now have to leave! "
     else:
         "The end."
 return
