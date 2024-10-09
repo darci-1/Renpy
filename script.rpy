@@ -27,7 +27,6 @@ label start:
     show eileen happy
 
     # These display lines of dialogue.
-    e "i am escaping the range, i have found some keys!"
 
     e "can you help me choose a key?"
 
@@ -68,17 +67,17 @@ label after_menu2:
      "after choosing the key, i found myself infront of three doors, not knowing which one to open."
 menu:
     "yellow door.":
-        "wrong door, you have entered the sargents office and got told off '"
+        "wrong door, you are now stuck in the labrynth '"
         
-    "red door.":
+    "green door.":
         "not quite right, try again "
         
-    "green door." if drank_tea:
-        "YES!, you have chosen the right door and can now start target practice '"
+    "red door." if drank_tea:
+        "YES!, you have chosen the right door and can be on your way '"
 
 label ending:
     if refuse_drink:
-        "you chose the bronze key,sargent caught you, you now have to leave! "
+        "you chose the bronze key, you now have to leave! "
     else:
         "The end."
 return
